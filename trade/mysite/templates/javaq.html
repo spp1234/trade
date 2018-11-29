@@ -1,0 +1,54 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+{% load static %}
+<script src="{% static 'backNoWork.js' %}"></script>
+   <link rel="stylesheet" type="text/css" href={% static 'styleee.css' %}> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Quiz</title>
+    </head>
+    
+    <body >
+    {% csrf_token %}
+    <span id="remainingTime" style="position: fixed;font-size: 23px;background:#ff3300;border-radius: 5px;padding: 10px;box-shadow: 2px 2px 2px 0px;"></span>
+    
+ 
+ <link rel="stylesheet" type="text/css" href={% static 'styleee.css' %}> 
+        <form id="myform" action="/javar/"  method="post">
+        {% csrf_token %}
+            <center><h1 class ="hone">Trade X</h1></center>
+           
+<hr/>
+<br>
+    {% for item in query_results %}
+            
+                                <div class="question-panel">
+                    <div class="question" >
+                    <label class="question-label">{{ item.QUESTION_NO }}</label>
+                   <b>{{ item.QUESTION }}</b>
+                   </div>
+                   <ol  class ="op" type='A'>
+        <br><b><li ><input type='radio' name="java{{item.QUESTION_NO}}" value='1' />{{item.OPTION1}}<br><br></li></b>
+        <br><b><li ><input type='radio' name="java{{item.QUESTION_NO}}" value='2' />{{item.OPTION2}}<br><br></li></b>
+        <br><b><li ><input type='radio' name="java{{item.QUESTION_NO}}" value='3'  />{{item.OPTION3}}<br><br></li></b>
+        <br><b><li ><input type='radio' name="java{{item.QUESTION_NO}}" value='4'  />{{item.OPTION4}}<br><br></li></b>
+                   </ol>
+                   <hr/>
+                             
+                   </div>
+              
+            
+    {% endfor %}
+    
+     
+    
+     <center><input type="submit" value="Submit" onclick="return ValidateForm(this.form)"></center>
+</form>
+<script>
+timer();
+</script>
+    </body>
+
+</html>

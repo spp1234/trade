@@ -1,0 +1,60 @@
+{% include "header.html" %}
+{% block content %}
+  {% load static %}
+  
+
+<!DOCTYPE >
+<html>
+<head>
+  {% load static %}
+  
+  <style type="text/css">
+  .hone
+{
+  color:#4e0b22;
+  font-family: 'Lora', serif;
+  font-size:46px
+}
+    body
+        {
+background-image:url("http://www.quickoffthemark.com.au/wp-content/uploads/2017/10/sell-lease-australian-trademark.jpg");            
+background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center
+        }
+  </style>
+<title>Home</title>
+ <link rel="stylesheet" type="text/css" href={% static 'style.css' %}> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body >
+
+
+<div align="center">
+<h5 class ="hone">Trade X</h5>
+
+&nbsp;&nbsp;&nbsp;<button  class="button button1 " onclick="document.location.href='/csq'"><b>Mobiles</b></button>
+<br></br>
+&nbsp;&nbsp;&nbsp;<button class="button button1 " onclick="document.location.href='/cq'" ><b>Laptops</b></button>
+<br></br>
+&nbsp;&nbsp;&nbsp;<button class="button button1 " onclick="document.location.href='/cppq'"><b>Vehicle</b></button>
+<br></br>
+&nbsp;&nbsp;&nbsp;<button class="button button1 " onclick="document.location.href='/javaq'"><b>Electrical components</b></button>
+<br></br>
+&nbsp;&nbsp;&nbsp;<button class="button button1 " onclick="document.location.href='/pythonq'"><b>Others</b></button>
+
+</div>
+</body>
+
+
+
+</html>
+
+
+{% endblock %}
